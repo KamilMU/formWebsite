@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+
+  .wrapper {
+    width: 100%;
+    max-width: 1141px;
+    margin: 0 auto;
+
+    @media (max-width: 1140px) {
+      width: 80%;
+    }
+  }
+
+  .wrapper_firstPage {
+    padding-top: 150px;
+  }
+
+  .wrapper_secondPage {
+    padding-top: 28px;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .formElement {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+// SECTION
+
+.section {
+  margin-bottom: 40px;
+}
+
+// TITTLE
+
+.tittle {
+  font-size: 18px;
+  line-height: 22px;
+  color: #211536;
+  margin-bottom: 40px;
+}
+
+// ROW FLEX
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 35px;
+
+  @media (max-width: 1140px) {
+    flex-direction: column;
+  }
+
+  .formElement {
+    margin-bottom: 0;
+
+    @media (max-width: 1140px) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.row_purple {
+
+  background: #FAF7FE;
+  padding: 20px 28px;
+  border-radius: 4px;
+}
+
+
+.row div + div {
+  margin-left: 20px;
+
+  @media (max-width: 1140px) {
+    margin-left: 0;
+  }
+}
+
+// BUTTON
+
+.button {
+  border: 1px solid #9B63F8;
+  background-color: white;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 285px;
+  height: 58px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+
+  &:active, 
+  &:hover {
+    color: #9B63F8;
+  }
+
+  &_purple {
+    color: white;
+    background-color: #9B63F8;
+
+    &:hover, 
+    &:active {
+      color: #9B63F8;
+      background-color: white;
+    }
+  }
+
+  &_long {
+    // padding: 19px 115px;
+  }
+
+  & + & {
+    margin-left: 20px;
+
+    @media (max-width: 1140px) {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 1140px) {
+    width: 100%;
+  }
+}
+
+// DATE
+
+.date {
+  position: relative;
+}
+
+.date__delete {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  padding: 6px 10px;
+  border-radius: 50%;
+  background: #351767;
+  cursor: pointer;
+  color: white;
+
+  &:hover, 
+  &:active {
+    color: #9B63F8;
+    background-color: white;
+  }
+}
+
+
+
+// VERIFICATION
+
+.verification {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #211536;
+
+  span {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #8E69CC;
+  }
+  
+  &__mainContent {
+    strong {
+      margin-top: 23px;
+      margin-bottom: 13px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__atantion {
+    display: flex;
+    align-items: center;
+
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 25px rgba(155, 99, 248, 0.15);
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 28px;
+
+    color: #211536;
+
+    img {
+      margin-right: 21px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    padding-top: 60px;
+    align-items: flex-start;
+  }
+
+  &__organizationName {
+    margin-top: 25px;
+  }
+
+  &__cenc {
+    background: #351767;
+    color: white;
+    padding: 14px 5px;
+  }
+
+  &__tittle {
+    font-style: normal;
+    word-wrap: break-word;
+    width: 80%;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 32px;
+
+    color: #351768;
+  }
+
+  &__text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 15px;
+    width: 100%;
+    word-wrap: break-word;
+  }
+
+  &__mainContent {
+    margin-left: 16px;
+  }
+
+  &__contactsTittle {
+    margin-top: 23px;
+    margin-bottom: 13px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+}
+
+
+.error {
+  color: red;
+}
+
+.mainElement {
+  display: flex;
+
+  img {
+    margin-right: 15px;
+    height: 16px;
+
+    @media (max-width: 1140px) {
+      margin-right: 4px;
+    }
+  }
+}
+
+

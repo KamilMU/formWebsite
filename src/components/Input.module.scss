@@ -1,0 +1,96 @@
+.input {
+  border: 1px solid #CDB1FB;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  padding: 20px 25px;
+}
+
+.label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+// .label_file {
+//   margin-bottom: 30px;
+// }
+
+.row {
+  display: flex;
+  align-items: baseline;
+  
+  img {
+    width: 126px;
+    height: 126px;
+    margin-right: 10px;
+  }
+}
+
+// FIle picker
+
+.fileContainer {
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.fileContainer > input {
+  display: none;
+}
+
+.fileContainer img {
+  cursor: pointer;
+  width: 126px;
+  height: 126px;
+}
+
+.imageText {
+  word-break: break-all;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+
+// Textare
+
+.container textarea {
+  width: 100%;
+  height: 223px;
+  border: 1px solid #CDB1FB;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  resize: none;
+}
+
+// 
+
+.image {
+  position: relative;
+}
+
+.deleteButton {
+  position: absolute;
+  cursor: pointer;
+  padding: 2px 4px;
+  background: black;
+  border-radius: 50%;
+  color: white;
+  top: -3px;
+  right: -3px;
+}
+
+// error
+
+.error {
+  color: red;
+}
+
+
+// timer
+
+input[type=time] {
+  text-align: right;
+}
