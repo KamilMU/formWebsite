@@ -15,7 +15,6 @@ interface Props {
 const Select: React.FC<Props> = ({
   setRating, formData, setValue,
   value, placeholder, label, name }) => {
-    console.log(formData, 'formmm')
   return (
     <>
       <label className={styles.label}>{label}</label>

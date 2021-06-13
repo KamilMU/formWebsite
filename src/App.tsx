@@ -1,14 +1,12 @@
 import classNames from 'classnames';
 import React from 'react';
-import DatePicker from './components/DatePicker';
 import ImageLoader from './components/ImageLoader';
 import TextArea from './components/TextArea';
 import Select from './components/Select';
 import Input from './components/Input';
-import Timer from './components/Timer';
+import Dates from './components/Dates';
 import { Value } from './types';
-import { Formik, Form, FieldArray, getIn } from 'formik';
-import axios from 'axios';
+import { Formik, Form } from 'formik';
 import { formSchema } from './yup';
 import { withRouter } from 'react-router-dom';
 import { RouteComponentProps } from 'react-router-dom';
@@ -47,7 +45,6 @@ const App: React.FC<Props> = ({
       >
         {({ errors }) => (
           <Form>
-            {console.log(errors, 'dates')}
             <div className={styles.container}>
               <div className={classNames(styles.wrapper, styles.wrapper_firstPage)}>
 
@@ -131,55 +128,11 @@ const App: React.FC<Props> = ({
                     />
                   </div>
 
-                  <FieldArray
-                    name="dates"
-                    render={arrayHelpers => (
-                      <>
-                        {formData.dates.map((date, index: number) => (
-                          <div className={styles.date} key={index}>
-                            <div className={index !== formData.dates.length - 1 ? classNames(styles.row, styles.row_purple) : styles.row}>
-                              <div className={styles.formElement}>
-                                <DatePicker label="Дата начала"
-                                  value={date.startDate} name={'startDate'}
-                                  setDate={handleChangeDate} />
-                                <div className={styles.error}>
-                                  {errors.dates && errors.dates[index]?.startDate}
-                                </div>
-                              </div>
-                              <div className={styles.formElement}>
-                                <Timer label="Время начала"
-                                  value={date.startTime} name={'startTime'}
-                                  setDate={handleChangeDate} />
-                                <div className={styles.error}>
-                                  {errors.dates && errors.dates[index]?.startTime}
-                                </div>
-                              </div>
-                              <div>-</div>
-                              <div className={styles.formElement}>
-                                <DatePicker label="Дата окончания"
-                                  value={date.endDate} name={'endDate'}
-                                  setDate={handleChangeDate} />
-                                <div className={styles.error}>
-                                  {errors.dates && errors.dates[index]?.endDate}
-                                </div>
-                              </div>
-                              <div className={styles.formElement}>
-                                <Timer label="Время окончания"
-                                  value={date.endTime} name={'endTime'}
-                                  setDate={handleChangeDate} />
-                                <div className={styles.error}>
-                                  {errors.dates && errors.dates[index]?.endTime}
-                                </div>
-                              </div>
-                            </div>
-                            {index !== formData.dates.length - 1 && (
-                              <div
-                                className={styles.date__delete}
-                                onClick={() => deleteDate(date.id)}>x</div>
-                            )}
-                          </div>
-                        ))}
-                      </>)}
+                  <Dates 
+                    formData={formData}
+                    deleteDate={deleteDate}
+                    handleChangeDate={handleChangeDate}
+                    errors={errors}
                   />
 
                   <button
